@@ -4,25 +4,29 @@
       class="overflow-hidden rounded-lg group shadow-lg m-4 cursor-pointer"
       @click="toggleHandeler"
     >
-      <div class="overflow-hidden relative">
-        <div class="works-layer group-hover:opacity-100">
-          <font-awesome-icon
-            class="bg-primary w-6 h-6 p-3 rounded-full"
+    <div class="overflow-hidden relative">
+      <div class="works-layer group-hover:opacity-100">
+        <font-awesome-icon
+        class="bg-primary w-6 h-6 p-3 rounded-full"
             icon="fa-solid fa-flag"
           />
         </div>
         <img
-          :src="img"
-          class="w-full h-60 rounded-t-lg transition-all duration-500 group-hover:scale-125 group-hover:rounded-t-lg"
-          alt="img"
+        :src="img"
+        class="w-full h-60 rounded-t-lg transition-all duration-500 group-hover:scale-125 group-hover:rounded-t-lg"
+        alt="img"
         />
       </div>
       <p
-        class="text-white text-xl py-4 rounded-b-lg transition-all duration-500 group-hover:text-primary"
+      class="text-white text-xl py-4 rounded-b-lg transition-all duration-500 group-hover:text-primary"
       >
-        {{ title }}
-      </p>
-    </div>
+      {{ title }}
+    </p>
+    <font-awesome-icon icon="fa-solid fa-link" />
+    <a href="https://github.com/A7med-Badr/AI" target="_blank"> 
+       <p style="color: rgb(62 180 137 / 0.6); margin-bottom: 10px;">GitHup </p>
+    </a>
+      </div>
     <!-- Website Modal View -->
     <teleport to="#works-modal" :disabled="show">
       <div v-if="isOpen" class="fixed inset-0 bg-third/50 overflow-auto z-50">
@@ -62,6 +66,6 @@
         return (this.show = !this.show), (this.isOpen = !this.isOpen);
       },
     },
-    props: ["modalImg", "title", "img"],
+    props: ["modalImg", "title", "img", "proj_link"],
   };
 </script>

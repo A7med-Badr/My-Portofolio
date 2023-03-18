@@ -88,7 +88,7 @@
         this.message = value;
       },
       sendMessageHandeler() {
-        window.location.href = `mailto:anas.rabea1000@gmail.com?Subject=Hi, I'm ${this.name}&body=${this.message}`;
+        window.location.href = `mailto:ahmed.youssef11011@gmail.com?Subject=Hi, I'm ${this.name}&body=${this.message}`;
       },
     },
     mounted() {
